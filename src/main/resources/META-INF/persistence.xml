@@ -13,6 +13,9 @@
         <class>sn.edu.ept.git.entities.Telephone</class>
         <class>sn.edu.ept.git.entities.Etudiant</class>
         <class>sn.edu.ept.git.entities.Carte</class>
+        <class>sn.edu.ept.git.entities.Departement</class>
+        <class>sn.edu.ept.git.entities.Filiere</class>
+
 
 
         <!-- EclipseLink Properties -->
