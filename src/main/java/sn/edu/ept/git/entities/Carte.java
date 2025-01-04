@@ -21,7 +21,7 @@ public class Carte implements Serializable {
     private Date dateDebut;
     private Date dateFin;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.PERSIST)
     private Etudiant etudiant;
 
     @PrePersist

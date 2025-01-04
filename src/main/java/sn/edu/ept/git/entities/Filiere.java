@@ -15,7 +15,7 @@ public class Filiere {
     @Column(unique = true, nullable = false)
     private String name;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "Dept")
     private Departement departement;
 }
