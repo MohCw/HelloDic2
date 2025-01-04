@@ -1,10 +1,9 @@
 package sn.edu.ept.git.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 public class Etudiant implements Serializable {
@@ -16,4 +15,10 @@ public class Etudiant implements Serializable {
 
     @OneToOne(mappedBy = "etudiant")
     private Carte carte;
+
+    @ManyToOne
+    private Pays PaysDeNaissance;
+
+    @ManyToMany
+    private List<Pays> nationalites;
 }
