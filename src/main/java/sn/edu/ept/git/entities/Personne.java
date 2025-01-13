@@ -1,9 +1,8 @@
 package sn.edu.ept.git.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDate;
 import java.util.Date;
@@ -13,11 +12,15 @@ import java.util.Date;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+@SuperBuilder //vous souhaitez construire un objet enfant (Etudiant) tout en spécifiant des attributs définis dans la classe parent (Personne).
 
 @Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "ROLE")
+@DiscriminatorValue(value = "EMPLOYE")
 public class Personne {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(length = 100, nullable = false)
