@@ -1,14 +1,14 @@
 package sn.edu.ept.git.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.List;
 @Builder
 @AllArgsConstructor
+@Getter
+@Setter
 @NoArgsConstructor
 @Entity
 public class Etudiant implements Serializable {

@@ -5,6 +5,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 
 @Entity
+
 public class Telephone {
     @Id
     private int id;
